@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class Player : MonoBehaviour
 {
     public float forward_speed = 5f;
+    public int score = 0;
     public float horizontal_speed = 5f;
     public Rigidbody rb;
     private float horizontalInput;
     bool alive = true;
+    public TextMeshProUGUI scoreText;
     
 
     // Update is called once per frame
     private void Update()
     {
-        
+        scoreText.text = "Score: " + score.ToString();
         horizontalInput = Input.GetAxis("Horizontal");
         if(transform.position.y < -5)
         {
