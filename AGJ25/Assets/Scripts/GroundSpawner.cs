@@ -6,10 +6,11 @@ public class GroundSpawner : MonoBehaviour
 {
     public GameObject groundTile;
     Vector3 nextSpawnPoint;
+    public float time = 0;
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i<15; i++)
+        for(int i = 0; i<10; i++)
         {
             SpawnTile();
         }
@@ -19,7 +20,7 @@ public class GroundSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        time = time + Time.deltaTime;
     }
 
     public void SpawnTile()
