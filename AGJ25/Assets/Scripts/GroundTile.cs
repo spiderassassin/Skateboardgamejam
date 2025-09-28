@@ -5,11 +5,28 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
-    public GameObject obstaclePrefab;
+    public GameObject dogPrefab;
+    public GameObject catPrefab;
+    public GameObject bananaPrefab;
+    public GameObject canPrefab;
+    public GameObject carBeepPrefab;
+    public GameObject carHonkPrefab;
+    public GameObject ratPrefab;
+    public GameObject snakePrefab;
+    public List<GameObject> prefabs = new List<GameObject>();
     public GameObject coinPrefab;
     // Start is called before the first frame update
     void Start()
     {
+        prefabs.Add(dogPrefab);
+        prefabs.Add(catPrefab);
+        prefabs.Add(bananaPrefab);
+        prefabs.Add(canPrefab);
+        prefabs.Add(carBeepPrefab);
+        prefabs.Add(carHonkPrefab);
+        prefabs.Add(ratPrefab);
+        prefabs.Add(snakePrefab);
+
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         if (groundSpawner.time > 1)
         {
@@ -34,7 +51,9 @@ public class GroundTile : MonoBehaviour
     {
         int obstacleSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
+
+        int obstacleIndex = Random.Range(0, 7);
+        Instantiate(prefabs[obstacleIndex], spawnPoint.position, Quaternion.identity, transform);
 
     }
 
