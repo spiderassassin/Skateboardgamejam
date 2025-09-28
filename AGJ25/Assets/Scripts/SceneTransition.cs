@@ -20,4 +20,13 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
+
