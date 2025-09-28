@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "WHEELS: " + score.ToString();
         horizontalInput = Input.GetAxis("Horizontal");
         if(transform.position.y < -5)
         {

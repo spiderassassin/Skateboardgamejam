@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7681061c57ed24a9abe9ba0126405bfe, type: 2}
+  - {fileID: 2100000, guid: 8e76f9453e1baeb4a8868503784e1e80, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 90
   wheel: {fileID: 2875562551889466184}
+  wheelrender: {fileID: 0}
 --- !u!54 &-5065010349543778667
 Rigidbody:
   m_ObjectHideFlags: 0

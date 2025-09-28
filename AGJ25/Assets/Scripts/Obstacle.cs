@@ -9,9 +9,12 @@ public class Obstacle : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource audioSource2;
     bool has_played = false;
+    public GameObject flavorText;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         player = GameObject.FindObjectOfType<Player>();
     }
 
@@ -45,6 +48,7 @@ public class Obstacle : MonoBehaviour
                 {
                     audioSource.Play();
                     has_played = true;
+                    flavorText.SetActive(true);
                 }
 
 
