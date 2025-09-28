@@ -7,6 +7,8 @@ public class Tire : MonoBehaviour
 {
     Player player;
     public float turnSpeed = 90f;
+    public AudioSource wheel;
+    public GameObject wheelrender;
 
     void Start()
     {
@@ -27,8 +29,12 @@ public class Tire : MonoBehaviour
         }
         if (other.transform.tag == "Player")
         {
+            wheel.Play();
+            transform.GetChild(0).gameObject.SetActive(false);
+            //wheelrender.SetActive(false);
+
             player.score++;
-            Destroy(gameObject);
+            Destroy(gameObject,2);
 
         }
     }
