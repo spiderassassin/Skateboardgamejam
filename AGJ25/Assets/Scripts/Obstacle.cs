@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-     Player player;
+    Player player;
+    public bool is_car;
     public AudioSource audioSource;
+    public AudioSource audioSource2;
     bool has_played = false;
     // Start is called before the first frame update
     void Start()
@@ -15,26 +17,48 @@ public class Obstacle : MonoBehaviour
 
 
 
-   
+
     // Update is called once per frame
     void Update()
     {
-        if((player.transform.position - this.transform.position).magnitude < 5)
+        if ((player.transform.position - this.transform.position).magnitude < 5)
         {
-            if(has_played == false)
+            if (has_played == false)
             {
-                audioSource.Play();
-                has_played = true;
+                if (is_car == true)
+                {
+                    int index = Random.Range(0, 2);
+
+                    if (index == 0)
+                    {
+                        audioSource.Play();
+                        has_played = true;
+
+                    }
+                    else
+                    {
+                        audioSource2.Play();
+                        has_played = true;
+                    }
+                }
+                else
+                {
+                    audioSource.Play();
+                    has_played = true;
+                }
+
+
             }
-            
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.transform.tag == "Player")
+        private void OnCollisionEnter(Collision collision)
         {
-            player.Die();
+            if (collision.transform.tag == "Player")
+            {
+                player.Die();
+            }
         }
     }
-}
+
+
