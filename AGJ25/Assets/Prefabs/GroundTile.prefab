@@ -133,7 +133,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8869e2aa53046f891be2a576ef3bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 1576678305337272937, guid: 4e3e2180c04434fd8bad44230e711cff, type: 3}
+  dogPrefab: {fileID: 1576678305337272937, guid: 6872215a32a23457ea3b604ef0f33614, type: 3}
+  catPrefab: {fileID: 1576678305337272937, guid: 4e0a4188c6ed14bb8ae15dddb7f217bd, type: 3}
+  bananaPrefab: {fileID: 1576678305337272937, guid: 4e8ab46af869348f0ab1d5ff39814875, type: 3}
+  canPrefab: {fileID: 1576678305337272937, guid: 4e3e2180c04434fd8bad44230e711cff, type: 3}
+  carBeepPrefab: {fileID: 1576678305337272937, guid: e1a81caee02c64620a50287b52c774cd, type: 3}
+  carHonkPrefab: {fileID: 1576678305337272937, guid: 2742547392c2b48bcb1462e70ff31ee7, type: 3}
+  ratPrefab: {fileID: 1576678305337272937, guid: 889608469e1874f45aa3c7207b435920, type: 3}
+  snakePrefab: {fileID: 1576678305337272937, guid: f26d2700f0745431f9d6eb0c39a4f91c, type: 3}
+  prefabs: []
   coinPrefab: {fileID: 4500153900727295109, guid: e8c84995533a9472b83f43ab4fb31835, type: 3}
 --- !u!1 &5188706981893898127
 GameObject:
