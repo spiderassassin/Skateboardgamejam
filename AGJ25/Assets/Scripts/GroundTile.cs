@@ -52,7 +52,7 @@ public class GroundTile : MonoBehaviour
         int obstacleSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
-        int obstacleIndex = Random.Range(0, 7);
+        int obstacleIndex = Random.Range(0, 8);
         Instantiate(prefabs[obstacleIndex], spawnPoint.position, Quaternion.identity, transform);
 
     }
