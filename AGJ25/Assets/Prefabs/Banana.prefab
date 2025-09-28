@@ -125,7 +125,6 @@ MonoBehaviour:
   audioSource: {fileID: 785146172967754314}
   audioSource2: {fileID: 0}
   flavorText: {fileID: 2271759719275303208}
-  particleMaterial: {fileID: 0}
 --- !u!82 &785146172967754314
 AudioSource:
   m_ObjectHideFlags: 0
@@ -136,7 +135,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 307f40f77df76418da05080bbcc00031, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cc1934da762d13c46b797cf27d3557d9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
