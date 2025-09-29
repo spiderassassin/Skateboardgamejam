@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class Player : MonoBehaviour
 {
+    public float jumpForce = 400f;
+    public LayerMask groundMask;
     public float forward_speed = 5f;
     public int score = 0;
     public float horizontal_speed = 5f;
@@ -12,6 +14,7 @@ public class Player : MonoBehaviour
     private float horizontalInput;
     bool alive = true;
     public TextMeshProUGUI scoreText;
+    public AudioSource jump;
     
 
     // Update is called once per frame
@@ -22,6 +25,11 @@ public class Player : MonoBehaviour
         if(transform.position.y < -5)
         {
             Die();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
         }
     }
     void FixedUpdate()
@@ -41,5 +49,19 @@ public class Player : MonoBehaviour
         alive = false;
         //Load the game over scene
         SceneManager.LoadScene(2);
+    }
+
+    void Jump()
+    {
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, (height / 2) + 0.1f, groundMask);
+        if (isGrounded)
+        {
+            jump.Play();
+            rb.AddForce(Vector3.up * jumpForce);
+        }
+        
+
+
     }
 }
